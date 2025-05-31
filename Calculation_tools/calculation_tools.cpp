@@ -1,3 +1,4 @@
+// git test 1
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -239,7 +240,7 @@ struct Cube {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 struct Sphere {
@@ -300,7 +301,7 @@ struct Sphere {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 struct Prism {
@@ -369,7 +370,7 @@ struct Prism {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 struct Cone {
@@ -383,7 +384,7 @@ struct Cone {
             printf("[Error] terdapat parameter yang kosong 0\n");
         }
     }
-    double luasPermukaanF() { 
+    double luasPermukaanF() {
         if (radius != 0 && tinggi != 0) {
             return phi * radius * (radius + sqrt(pow(radius, 2) + pow(tinggi, 2)));
         } else if (volume != 0) {
@@ -426,7 +427,7 @@ struct Cone {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 struct Pyramid {
@@ -495,7 +496,7 @@ struct Pyramid {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 struct Cylinder {
@@ -564,7 +565,7 @@ struct Cylinder {
         } else {
             printf("[Error]  0\n");
         }
-        
+
     }
 };
 
@@ -645,7 +646,7 @@ string encryption(string algorithm, bool type, string text, vector<string> param
         cerr << "[Error] Algoritma tidak dikenal!" << endl;
         return "";
     } */
-    
+
 }
 
 // Fungsi untuk memecah string berdasarkan delimiter
@@ -663,7 +664,7 @@ vector<string> split(const string& str, char delimiter) {
 
 // Fungsi utama untuk menjalankan command
 void executeCommand(const string& target, const string& command, const string& params) {
-    
+
     /* format command: <target|command|parameter{}>
     contoh:
         cube|volume|panjang;lebar;tinggi;volume;luasPermukaan;panjangDiagonal;
@@ -674,7 +675,7 @@ void executeCommand(const string& target, const string& command, const string& p
 
     vector<string> paramList = split(params, ';');
     vector<double> doubleParamList;
-    
+
     for (const auto& x : paramList) {
         bool isDouble = true;
         for (char c : x) {
@@ -689,7 +690,7 @@ void executeCommand(const string& target, const string& command, const string& p
             break;
         }
     }
-    
+
     cout << "Command: " << command << "\n";
     cout << "Target : " << target << "\n";
     cout << "Params : " << params << "\n";
